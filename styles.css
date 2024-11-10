@@ -1,0 +1,99 @@
+:root {
+    --reddish: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blueish: hsl(212, 86%, 64%);
+    --darkblue: hsl(234, 12%, 34%);
+    --grayishblue: hsl(229, 6%, 66%);
+    --lightgray: hsl(0, 0%, 98%);
+    --distance: 20px;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+body {
+    min-height: 100svh;
+    margin: 0;
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    text-align: center;
+    background-color: var(--lightgray);
+}
+h1, p {
+    margin-top: 0;
+}
+.pre-title, h1 {
+    font-size: 1.8rem;
+}
+.pre-title {
+    font-weight: 200;
+    color: var(--darkblue);
+}
+h1 {
+    font-weight: 600;
+    color: var(--darkblue);
+}
+.description {
+    margin: 0 auto;
+    margin-top: 15px;
+    max-width: 500px;
+    font-weight: 200;
+    color: var(--darkblue);
+    font-size: .9rem;
+}
+.cards {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    gap: var(--distance);
+    align-items: center;
+}
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--distance);
+}
+.card {
+    max-width: 400px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: left;
+    padding: 20px;
+    max-height: fit-content;
+}
+.card img {
+    display: block;
+    margin-left: auto;
+}
+h2 {
+    margin-top: 0;
+    font-weight: 600;
+    color: var(--darkblue);
+}
