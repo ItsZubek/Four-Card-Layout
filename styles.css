@@ -6,7 +6,8 @@
     --darkblue: hsl(234, 12%, 34%);
     --grayishblue: hsl(229, 6%, 66%);
     --lightgray: hsl(0, 0%, 98%);
-    --distance: 20px;
+    --distance: 30px;
+    --radius: 7px;
 }
 /* Box sizing rules */
 *,
@@ -28,12 +29,8 @@ figure, blockquote, dl, dd {
   margin-block-end: 0;
 }
 .attribution {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    margin-top: 50px;
 }
-
 body {
     min-height: 100svh;
     margin: 0;
@@ -45,6 +42,7 @@ body {
     font-size: 15px;
     text-align: center;
     background-color: var(--lightgray);
+    padding: 16px;
 }
 h1, p {
     margin-top: 0;
@@ -81,19 +79,60 @@ h1 {
     gap: var(--distance);
 }
 .card {
-    max-width: 400px;
-    border-radius: 10px;
+    max-width: 350px;
+    min-height: 220px;
+    border-radius: var(--radius);
     background-color: white;
     text-align: left;
-    padding: 20px;
+    padding: 30px;
     max-height: fit-content;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.12);;
 }
 .card img {
-    display: block;
-    margin-left: auto;
+align-self: flex-end;
+justify-self: flex-end;
 }
 h2 {
     margin-top: 0;
     font-weight: 600;
     color: var(--darkblue);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+.color-bar {
+    position: absolute;
+   
+    width: 100%;
+    height: 3px;
+    top: 0;
+    left: 0;
+    border-radius: var(--radius);
+}
+.border-cyan {
+    background-color: var(--cyan);
+}
+.border-red {
+    background-color: var(--reddish);
+}
+.border-orange {
+    background-color: var(--orange);
+}
+.border-blue {
+    background-color: var(--blueish);
+}
+.card-description {
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: var(--darkblue);
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1140px) {
+.cards {
+    flex-direction: column;
+}
 }
